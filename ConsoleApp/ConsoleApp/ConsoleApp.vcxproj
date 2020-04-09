@@ -147,7 +147,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Engine\Console.cpp" />
     <ClCompile Include="ConsoleApp.cpp" />
+    <ClCompile Include="Engine\Math\IVector2.cpp" />
+    <ClCompile Include="Engine\WorldObject.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine\Console.h" />
+    <ClInclude Include="Engine\Colours.h" />
+    <ClInclude Include="Engine\Math\IVector2.h" />
+    <ClInclude Include="Engine\WorldObject.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
