@@ -53,6 +53,18 @@ void Console::Print(std::string s, bool newLine)
 	}
 }
 
+void Console::Clear()
+{
+	DWORD dwBufferLen = screenBufferInfo.dwSize.X * screenBufferInfo.dwSize.Y;
+	const COORD coordWriteStart{ 0,0 };
+	DWORD dwWritten;
+
+	const char fillChar = ' ';
+	FillConsoleOutputAttribute(hStdout, screenBufferInfo.wAttributes, dwBufferLen, coordWriteStart, &dwWritten);
+	FillConsoleOutputCharacter(hStdout, fillChar, dwBufferLen, coordWriteStart, &dwWritten);
+	SetConsoleCursorPosition(hStdout, coordWriteStart);
+}
+
 void Console::SetWindowSize(int width, int height)
 {
 	GetWindowRect(hConsoleWindow, &windowDimensions);

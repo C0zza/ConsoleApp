@@ -1,16 +1,14 @@
 
-#include "Engine/Console.h"
-#include "Engine/Math/IVector2.h"
-#include <iostream>
+#include"Engine/System.h"
 
 int main()
 {
-    IVector2 testVector(5, 5);
-    IVector2 testVector2(10, 10);
+    System* system = new System;
 
-    testVector += testVector2;
+    system->Run();
 
-    std::cout << testVector.x << ", " << testVector.y;
+    delete system;
+    system = nullptr;
 
     return 0;
 }

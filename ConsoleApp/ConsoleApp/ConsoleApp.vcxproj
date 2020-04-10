@@ -151,12 +151,20 @@
     <ClCompile Include="ConsoleApp.cpp" />
     <ClCompile Include="Engine\Math\IVector2.cpp" />
     <ClCompile Include="Engine\WorldObject.cpp" />
+    <ClCompile Include="Engine\Sprite.cpp" />
+    <ClCompile Include="Engine\Object.cpp" />
+    <ClCompile Include="Engine\System.cpp" />
+    <ClCompile Include="Game\Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Console.h" />
     <ClInclude Include="Engine\Colours.h" />
     <ClInclude Include="Engine\Math\IVector2.h" />
     <ClInclude Include="Engine\WorldObject.h" />
+    <ClInclude Include="Engine\Sprite.h" />
+    <ClInclude Include="Engine\Object.h" />
+    <ClInclude Include="Engine\System.h" />
+    <ClInclude Include="Game\Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

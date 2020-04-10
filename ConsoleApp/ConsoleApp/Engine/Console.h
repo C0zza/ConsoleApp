@@ -27,6 +27,6 @@ public:
 	void SetCursorColour(COLOUR colour);
 
 	void Print(std::string s, bool newLine = false);
-
+	void Clear();
 	void SetWindowSize(int width, int height);
 };
