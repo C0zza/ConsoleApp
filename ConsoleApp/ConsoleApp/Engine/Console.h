@@ -13,6 +13,7 @@ private:
 	HANDLE hStdout, hStdin;
 	CONSOLE_SCREEN_BUFFER_INFO screenBufferInfo;
 
+	CONSOLE_CURSOR_INFO cursorInfo;
 	COORD cursorPosition;
 	COLOUR cursorColour;
 
@@ -27,6 +28,7 @@ public:
 	void SetCursorColour(COLOUR colour);
 
 	void Print(std::string s, bool newLine = false);
+
 	void Clear();
 	void SetWindowSize(int width, int height);
 };

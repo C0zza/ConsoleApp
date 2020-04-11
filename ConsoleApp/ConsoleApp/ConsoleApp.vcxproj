@@ -155,6 +155,7 @@
     <ClCompile Include="Engine\Object.cpp" />
     <ClCompile Include="Engine\System.cpp" />
     <ClCompile Include="Game\Player.cpp" />
+    <ClCompile Include="Engine\Input.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Console.h" />
@@ -165,6 +166,7 @@
     <ClInclude Include="Engine\Object.h" />
     <ClInclude Include="Engine\System.h" />
     <ClInclude Include="Game\Player.h" />
+    <ClInclude Include="Engine\Input.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

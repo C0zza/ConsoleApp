@@ -9,11 +9,15 @@ class Sprite
 {
 private:
 	
-	Console* console;
-	std::vector<char*> sprite;
+	static Console* console;
+	std::vector<std::string> sprite;
 
 public:
 	
+	Sprite();
+
 	void Draw(IVector2& position);
+
+	static void SetConsole(Console* console);
 };
 

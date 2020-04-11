@@ -19,6 +19,16 @@ Console::Console()
 		return;
 	}
 
+	if (!GetConsoleCursorInfo(hStdout, &cursorInfo))
+	{
+		MessageBox(NULL, TEXT("GetCursorInfo"), TEXT("Cursor info failed to initialise."), MB_OK);
+		return;
+	}
+
+	cursorInfo.bVisible = false;
+	SetConsoleCursorInfo(hStdout, &cursorInfo);
+
+
 	cursorPosition = { 0,0 };
 	cursorColour = COLOUR::WHITE;
 

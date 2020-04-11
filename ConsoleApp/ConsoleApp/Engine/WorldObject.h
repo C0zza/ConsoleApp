@@ -18,5 +18,9 @@ public:
 	WorldObject();
 	WorldObject(IVector2 pos);
 
+	void UpdateWorldObject();
+
+	Sprite* GetSprite();
+
 };
 

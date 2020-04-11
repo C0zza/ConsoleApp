@@ -1,7 +1,7 @@
 #include "Object.h"
 
 Object::Object()
-	:enabled{ false }
+	:enabled{ true }, destroyed{ false }
 {
 }
 
@@ -9,6 +9,18 @@ void Object::UpdateObject()
 {
 	if (enabled)
 	{
-		Update();
+		UpdateWorldObject();
 	}
 }
+
+void Object::DestroyObject()
+{
+	destroyed = true;
+}
+
+bool Object::GetDestroyed()
+{
+	return destroyed;
+}
+
+
