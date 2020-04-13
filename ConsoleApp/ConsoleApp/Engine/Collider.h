@@ -24,6 +24,8 @@ public:
 
 	bool CheckCollision();
 	bool CheckMovementForCollision(IVector2 movement);
+	
+	void UpdateDimensions(std::vector<std::string>* sprite);
 
 	IVector2* GetPosition();
 };

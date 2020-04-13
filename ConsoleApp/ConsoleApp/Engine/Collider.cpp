@@ -7,17 +7,7 @@ Collider::Collider(IVector2* position, std::vector<std::string>* sprite)
 {
 	this->position = position;
 
-	width = 0;
-
-	for (int i = 0; i < sprite->size(); i++)
-	{
-		if (sprite[i].size() > width)
-		{
-			width = sprite[i].size();
-		}
-	}
-
-	height = sprite->size();
+	UpdateDimensions(sprite);
 
 	colliderID = allColliders.size();
 	allColliders.push_back(this);
@@ -67,6 +57,21 @@ bool Collider::CheckMovementForCollision(IVector2 movement)
 	}
 
 	return false;
+}
+
+void Collider::UpdateDimensions(std::vector<std::string>* sprite)
+{
+	width = 0;
+
+	for (int i = 0; i < sprite->size(); i++)
+	{
+		if (sprite[i].size() > width)
+		{
+			width = sprite[i].size();
+		}
+	}
+
+	height = sprite->size();
 }
 
 IVector2* Collider::GetPosition()

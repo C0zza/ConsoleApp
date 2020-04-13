@@ -22,6 +22,7 @@ WorldObject::WorldObject(IVector2 pos)
 void WorldObject::UpdateWorldObject()
 {
 	sprite->Draw(position);
+	
 	Update();
 }
 

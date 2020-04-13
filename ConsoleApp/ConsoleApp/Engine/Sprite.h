@@ -19,6 +19,7 @@ public:
 	void Draw(IVector2& position);
 
 	void SetSprite(std::vector<std::string> sprite);
+	void SetSprite(const char* sprite[]);
 	std::vector<std::string> GetSprite();
 
 	static void SetConsole(Console* console);
