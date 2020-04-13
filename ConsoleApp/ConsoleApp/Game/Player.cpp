@@ -23,5 +23,5 @@ void Player::Update()
 
 void Player::Move(IVector2 movement)
 {
-	position += movement;
+	Translate(movement);
 }

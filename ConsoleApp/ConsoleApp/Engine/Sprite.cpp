@@ -18,6 +18,16 @@ void Sprite::Draw(IVector2& position)
 	}
 }
 
+void Sprite::SetSprite(std::vector<std::string> sprite)
+{
+	this->sprite = sprite;
+}
+
+std::vector<std::string> Sprite::GetSprite()
+{
+	return sprite;
+}
+
 void Sprite::SetConsole(Console* theConsole)
 {
 	console = theConsole;

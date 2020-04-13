@@ -3,12 +3,14 @@
 #include "Console.h"
 #include "Sprite.h"
 #include "../Game/Player.h"
+#include "../Game/TestObject.h"
 
 System::System()
 	: running{ true }
 {
 	this->console = new Console;
 	objects.push_back(new Player());
+	objects.push_back(new TestObject(IVector2(20, 20)));
 	Sprite::SetConsole(console);
 }
 
@@ -36,7 +38,7 @@ void System::Run()
 			}
 		}
 
-		Sleep(1000 / 60);
+		Sleep(1000 / 30);
 
 		console->Clear();
 	}
